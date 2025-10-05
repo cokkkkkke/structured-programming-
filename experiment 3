@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main(){
+int i,j,rows;
+printf("Enter number of rows: ");
+scanf("%d",&rows);
+
+printf("\nRight-angled triangle:\n");
+for(i=1;i<=rows;i++){
+for(j=1;j<=i;j++) printf("* ");
+printf("\n");
+}
+
+printf("\nHollow right-angled triangle:\n");
+for(i=1;i<=rows;i++){
+for(j=1;j<=i;j++){
+if(j==1||j==i||i==rows) printf("* ");
+else printf("  ");
+}
+printf("\n");
+}
+
+printf("\nFilled equilateral triangle:\n");
+for(i=1;i<=rows;i++){
+for(j=i;j<rows;j++) printf(" ");
+for(j=1;j<=2*i-1;j++) printf("*");
+printf("\n");
+}
+
+printf("\nHollow equilateral triangle:\n");
+for(i=1;i<=rows;i++){
+for(j=i;j<rows;j++) printf(" ");
+for(j=1;j<=2*i-1;j++){
+if(j==1||j==2*i-1||i==rows) printf("*");
+else printf(" ");
+}
+printf("\n");
+}
+return 0;
+}
+ 
